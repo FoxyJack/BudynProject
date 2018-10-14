@@ -1,0 +1,1 @@
+﻿dotnet ef dbcontext scaffold "Data Source=PRZEMZ-WS-PC\SQLExpress;Initial Catalog=FOX;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -o Models --project GeneticsShop --startup-project GeneticsShop --force
