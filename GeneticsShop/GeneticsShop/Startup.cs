@@ -33,7 +33,7 @@ namespace GeneticsShop
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            var connection = Configuration.GetConnectionString(Environment.GetEnvironmentVariable("ASPNETCORE_DEVELOPER"));
+            var connection = "Data Source=\\\\.\\pipe\\LOCALDB#0EFF8958\\tsql\\query;Initial Catalog=FOX;Integrated Security=True";
             services.AddDbContext<FOXContext>
                 (options => options.UseSqlServer(connection));
 

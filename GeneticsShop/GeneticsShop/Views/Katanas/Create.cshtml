@@ -1,0 +1,43 @@
+﻿@model GeneticsShop.Models.Katanas
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Katanas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sharpness" class="control-label"></label>
+                <input asp-for="Sharpness" class="form-control" />
+                <span asp-validation-for="Sharpness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProductNavigation.Price" class="control-label"></label>
+                <input asp-for="IdProductNavigation.Price" class="form-control" />
+                <span asp-validation-for="IdProductNavigation.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.IdProductNavigation.Name)</label>
+                <input name="Name" id="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Secret</label>
+                <input type="text" name="optionalText" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
