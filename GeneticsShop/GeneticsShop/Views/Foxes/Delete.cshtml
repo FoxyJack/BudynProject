@@ -1,0 +1,33 @@
+﻿@model GeneticsShop.Models.Foxes
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Foxes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProductNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdProductNavigation.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdProduct" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

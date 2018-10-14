@@ -1,0 +1,30 @@
+﻿@model GeneticsShop.Models.Foxes
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Foxes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProductNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdProductNavigation.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tails)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdProduct">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
